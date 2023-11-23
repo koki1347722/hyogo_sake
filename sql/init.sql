@@ -63,7 +63,7 @@ insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('特別純
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('特別純米　山田錦　ひやおろし', '兵庫県特A地区産山田錦', 65, 18, 'honda3.png', 'honda');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('特別純米　山田穂　ひやおろし', '兵庫県多可郡多可町中区産山田穂', 65, 18, 'honda4.png', 'honda');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('純米酒　ドラゴンスパークリング', '兵庫県特A地区産山田錦', 65, 14, 'honda5.png', 'honda');
-insert into hyogo(name, ALC, image, genre) values('Terroir A', 43, '', 'honda');
+insert into hyogo(name, ALC, image, genre) values('Terroir A', 43, 'honda45.jpg', 'honda');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('純米大吟醸『米のささやき』', '山田錦', 50, 16, 'honda6.jpg', 'honda');
 insert into hyogo(name, ALC, image, genre) values('熟成古酒　玄妙甘蜜 ', 14, 'honda7.jpg', 'honda');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('純米大吟醸　秋津', '兵庫県特A地区秋津産山田錦', 35, 16, 'honda8.png', 'honda');
