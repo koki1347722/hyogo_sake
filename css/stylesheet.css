@@ -9,6 +9,12 @@ p1 {
     font-size: 20px
 }
 
+/* ページ全体を中央に表示（センタリング）するには、
+   ページ全体である<body>～</body>の中に<div>～</div>を入れ、
+   その<div>～</div>を中央に表示する。
+   次のbodyと#mainの2つの設定で実装される。
+*/
+
 /* body要素内の文字列をセンタリング */
 body {
     text-align: center;
@@ -50,6 +56,15 @@ a:active {
     padding-right: 20px;
 }
 
+/* トップ画面（index.php）の３つのジャンルを横一列に表示する */
+.topnavi {
+    display: table;
+    table-layout: fixed;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 600px;
+    height: 200px;
+}
 
 /* トップ画面（index.php）の各ジャンルを表示するセルのスタイル */
 .topbox {
@@ -60,11 +75,57 @@ a:active {
     border: 1px solid #c0c0c0;
 }
 
-.img {
-    padding: 2px 1px 0;
-    width: 20px;
-    height: 20px;
+/* トップ画面（index.php）のジャンルの文字（PC、BOOK、MUSIC）のマージン */
+.topvalue {
+    margin: 10px 0 0;
 }
+
+/* トップ画面（index.php）に表示する各ジャンルの画像の高さ */
+.topimage {
+    height: 120px;
+}
+
+/* エラーメッセージの文字色を赤にする */
+.error_class {
+    color: #ff0000;
+}
+
+/* リンクをボタンのように見せる
+     以下はbutton_imageクラスを持つリンク
+      ジャンル別商品一覧画面（product_select.php）の「詳細」リンク
+      商品詳細画面（product_detail.php）の「ジャンル別商品一覧に戻る」リンク
+      ログイン画面（login.php）の「新規登録はこちらから」リンク
+      注文内容確認画面（order_confirm.php）の「お届け先情報を変更する」リンク
+      注文内容確認画面（order_confirm.php）の「注文内容を変更する」リンク
+  */
+.button_image,
+.button_image2 {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 5px 10px;
+    color: #000000;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+}
+
+/* リンクをボタンのように見せる
+     以下はbutton_image2クラスを持つリンク
+      カート内商品一覧画面（cart_list.php）の「注文する」リンク
+      注文内容確認画面（order_confirm.php）の「注文を確定する」リンク
+  */
+.button_image2 {
+    font-size: 12px;
+    color: #ffffff;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+}
+
+
+/* 以下はミニショップで利用したスタイル */
 
 /* テーブルを常に画面中心に配置 */
 table {
@@ -101,7 +162,7 @@ td {
     word-break: break-all;
 }
 
-/* makerのセルの幅を150pxとし、収まりきらない場合は折り返して表示する */
+/* rice_nameのセルの幅を150pxとし、収まりきらない場合は折り返して表示する */
 .td_rice_name {
     width: 150px;
     word-break: break-all;
@@ -125,3 +186,20 @@ img.detail_img {
     width: 40%;
     height: 40%;
 }
+
+/* 数量の入力幅を35pxに ・・ detail.php、cartlist.phpで使用*/
+.quantity_number {
+    width: 35px;
+}
+
+/* 価格のセルの幅を80pxに ・・ orderhistory.phpで使用 */
+.td_item_price {
+    width: 80px;
+}
+
+/* 金額のセルの幅を120pxに ・・ orderhistory.phpで使用 */
+.td_item_total {
+    width: 120px;
+}
+
+/* 01001 */

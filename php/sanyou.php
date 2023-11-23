@@ -1,14 +1,18 @@
 <?php
+require_once __DIR__ . '/image_tool.php';
 // genreの値を受け取る										
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['genre'])) {
     // POSTで送られてきた場合	
     $genre = $_POST['genre'];
-} else {
+} else if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['genre'])) {
     // GETで送られてきた場合	
     $genre = $_GET['genre'];
+} else {
+    $genre = 'default_value';
 }
 
 require_once __DIR__ . '/product.php';
+$genre = 'sanyou'; //ジャンルの指定
 // Productオブジェクトを生成する
 $product = new Product();
 
@@ -28,14 +32,14 @@ require_once __DIR__ . '/header.php';
         <th>詳細</th>
     </tr>
     <?php
-    foreach ($hyogo as $hyogo) {
+    foreach ($hyogo as $kobe) {
     ?>
         <tr>
-            <td class="td_mini_img"><img class="mini_img" src="../images/<?= $hyogo['image'] ?>"></td>
-            <td class="td_sake_name"><?= $hyogo['name'] ?></td>
-            <td class="td_rice_name"><?= $hyogo['rice'] ?></td>
-            <td class="td_rice_percent"><?= number_format($hyogo['rice_percent']) ?></td>
-            <td><a href="product_detail.php?ident=<?= $hyogo['ident'] ?>"><span class="button_image">詳細</span></a></td>
+            <td class="td_mini_img"><img src="<?php echo img_judge("../images/" . $kobe['image']); ?>" <?php echo img_size("../images/" . $kobe['image']); ?> border='0'><br></td>
+            <td class="td_sake_name"><?= $kobe['name'] ?></td>
+            <td class="td_rice_name"><?= $kobe['rice'] ?></td>
+            <td class="td_rice_percent"><?= number_format($kobe['rice_percent']) ?></td>
+            <td><a href="product_detail.php?ident=<?= $kobe['ident'] ?>"><span class="button_image">詳細</span></a></td>
         </tr>
     <?php
     }
