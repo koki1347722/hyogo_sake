@@ -90,16 +90,8 @@ a:active {
     color: #ff0000;
 }
 
-/* リンクをボタンのように見せる
-     以下はbutton_imageクラスを持つリンク
-      ジャンル別商品一覧画面（product_select.php）の「詳細」リンク
-      商品詳細画面（product_detail.php）の「ジャンル別商品一覧に戻る」リンク
-      ログイン画面（login.php）の「新規登録はこちらから」リンク
-      注文内容確認画面（order_confirm.php）の「お届け先情報を変更する」リンク
-      注文内容確認画面（order_confirm.php）の「注文内容を変更する」リンク
-  */
-.button_image,
-.button_image2 {
+/* リンクをボタンのように見せる*/
+.button_image {
     position: relative;
     display: inline-block;
     height: 10px;
@@ -110,20 +102,6 @@ a:active {
     background-color: #EEEEEE;
     border: 1px solid #CCCCCC;
 }
-
-/* リンクをボタンのように見せる
-     以下はbutton_image2クラスを持つリンク
-      カート内商品一覧画面（cart_list.php）の「注文する」リンク
-      注文内容確認画面（order_confirm.php）の「注文を確定する」リンク
-  */
-.button_image2 {
-    font-size: 12px;
-    color: #ffffff;
-    background-color: orange;
-    border-radius: 5px;
-    border: none;
-}
-
 
 /* 以下はミニショップで利用したスタイル */
 
@@ -146,13 +124,13 @@ td {
     padding: 3px 10px 3px 10px;
 }
 
-/* セル内のデータを右詰め表示 */
-.td_right {
-    text-align: right;
+th,
+td {
+    text-align: center;
 }
 
-/* セル内のデータをセンター表示 */
-.td_center {
+td>span {
+    display: block;
     text-align: center;
 }
 
@@ -187,19 +165,7 @@ img.detail_img {
     height: 40%;
 }
 
-/* 数量の入力幅を35pxに ・・ detail.php、cartlist.phpで使用*/
-.quantity_number {
-    width: 35px;
+/* セル内のデータをセンター表示 */
+.td_center {
+    text-align: center;
 }
-
-/* 価格のセルの幅を80pxに ・・ orderhistory.phpで使用 */
-.td_item_price {
-    width: 80px;
-}
-
-/* 金額のセルの幅を120pxに ・・ orderhistory.phpで使用 */
-.td_item_total {
-    width: 120px;
-}
-
-/* 01001 */

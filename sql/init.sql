@@ -12,7 +12,8 @@ use sake;
 # テーブルhyogoの作成
 create table hyogo(
     ident int auto_increment primary key,
-    name varchar(50) not null,
+    kura varchar(50),
+    name varchar(50),
     rice varchar(50),
     malt varchar (50),
     materials varchar(50),
@@ -20,10 +21,19 @@ create table hyogo(
     malt_percent int,
     ALC int,
     image varchar(50),
-    genre varchar(20)
+  genre varchar(20)
 );
 
 # テーブルhyogoへデータを入力
+# 酒造一覧
+insert into hyogo(kura, image, genre) values('山陽盃酒造', 'sanyou.jpg', 'list');
+insert into hyogo(kura, image, genre) values('本田商店', 'honda.png', 'list');
+insert into hyogo(kura, image, genre) values('下村酒造店', 'simomura.png', 'list');
+insert into hyogo(kura, image, genre) values('山名酒造', 'yamana.png', 'list');
+insert into hyogo(kura, image, genre) values('壺坂酒造', 'tubo.png', 'list');
+insert into hyogo(kura, image, genre) values('白鷹', 'siro.png', 'list');
+insert into hyogo(kura, image, genre) values('都美人酒造', 'miyako.jpg', 'list');
+
 #sanyou
 insert into hyogo(name, rice, rice_percent, image, genre) values('播州一献　大吟醸　袋搾り斗瓶取り', '特A地区播州吉川産山田錦', 40, 'sanyou1.png', 'sanyou');
 insert into hyogo(name, rice, rice_percent, image, genre) values('播州一献　大吟醸', '特A地区播州吉川産山田錦', 40, 'sanyou2.png', 'sanyou');
@@ -181,34 +191,34 @@ insert into hyogo(name, materials, ALC, image, genre) values('いちごのお酒
 
 
 #siro
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('大吟醸白鷹', '兵庫県吉川町特A地区産山田錦100％', 35, 16.0-16.9, 'siro1.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('大吟醸白鷹', '兵庫県吉川町特A地区産山田錦100％', 35, 16, 'siro1.jpg', 'siro');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('大吟醸古酒白鷹', '兵庫県吉川町特A地区産山田錦100％', 35, 16, 'siro2.jpg', 'siro');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('大吟醸純米　悦蔵　磨35', '兵庫県吉川町産特Ａ山田錦100％', 35, 17, 'siro3.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・大吟醸純米 極上白鷹', '兵庫県吉川町特A地区産山田錦100％', 50, 16.0-16.9, 'siro4.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・大吟醸純米 極上白鷹', '兵庫県吉川町特A地区産山田錦100％', 50, 16, 'siro4.jpg', 'siro');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('悦蔵　吟醸純米 一ッ火原酒', '兵庫県吉川特A地区産山田錦100％', 60, 18, 'siro5.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・吟醸純米 超特撰白鷹', '兵庫県吉川町特A地区産山田錦100％', 60, 16.0-16.9, 'siro6.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('吟醸山田錦', '兵庫県吉川町特A地区産山田錦100％', 60, 15.0-15.9, 'siro7.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('吟醸生貯蔵酒', '兵庫県吉川特A地区産山田錦100％', 60, 15.0-15.9, 'siro8.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('純米吟醸　江の島乃風', '兵庫県吉川特A地区産山田錦100％', 60, 16.0-16.9, 'siro9.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・吟醸純米 超特撰白鷹', '兵庫県吉川町特A地区産山田錦100％', 60, 16, 'siro6.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('吟醸山田錦', '兵庫県吉川町特A地区産山田錦100％', 60, 15, 'siro7.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('吟醸生貯蔵酒', '兵庫県吉川特A地区産山田錦100％', 60, 15, 'siro8.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('純米吟醸　江の島乃風', '兵庫県吉川特A地区産山田錦100％', 60, 16, 'siro9.jpg', 'siro');
 insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('吟醸純米 生原酒 悦蔵', '兵庫県吉川特A地区産山田錦100％', 60, 18, 'siro10.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('悦蔵　特別純米　一ッ火', '兵庫県吉川特A地区産山田錦100％', 70, 16.0-16.9, 'siro11.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('特別純米酒　宮水の郷', '兵庫県吉川特A地区産山田錦100％', 70, 16.0-16.9, 'siro12.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 金松白鷹', '兵庫県吉川町特A地区産山田錦100％', 70, 16.0-16.9, 'siro13.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 伊勢神宮・御料酒蔵純米酒', '兵庫県吉川町特A地区産山田錦100％', 70, 16.0-16.9, 'siro14.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 辛口純米', '兵庫県吉川町特A地区産山田錦100％', 70, 16.0-16.9, 'siro15.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('白鷹特別純米　赤ラベル', '兵庫県吉川特A地区産山田錦100％', 70, 16.0-16.9, 'siro16.jpg', 'siro');
-insert into hyogo(name, rice_percent, ALC, image, genre) values('生もと・本醸造 特撰黒松白鷹', 70, 16.0-16.9, 'siro17.jpg', 'siro');
-insert into hyogo(name, rice_percent, ALC, image, genre) values('生もと・本醸造 上撰青松白鷹', 70, 15.0-15.9, 'siro18.jpg', 'siro');
-insert into hyogo(name, rice_percent, ALC, image, genre) values('白鷹御神酒', 70, 15.0-15.9, 'siro19.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('悦蔵　特別純米　一ッ火', '兵庫県吉川特A地区産山田錦100％', 70, 16, 'siro11.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('特別純米酒　宮水の郷', '兵庫県吉川特A地区産山田錦100％', 70, 16, 'siro12.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 金松白鷹', '兵庫県吉川町特A地区産山田錦100％', 70, 16, 'siro13.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 伊勢神宮・御料酒蔵純米酒', '兵庫県吉川町特A地区産山田錦100％', 70, 16, 'siro14.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・特別純米 辛口純米', '兵庫県吉川町特A地区産山田錦100％', 70, 16, 'siro15.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('白鷹特別純米　赤ラベル', '兵庫県吉川特A地区産山田錦100％', 70, 16, 'siro16.jpg', 'siro');
+insert into hyogo(name, rice_percent, ALC, image, genre) values('生もと・本醸造 特撰黒松白鷹', 70, 16, 'siro17.jpg', 'siro');
+insert into hyogo(name, rice_percent, ALC, image, genre) values('生もと・本醸造 上撰青松白鷹', 70, 15, 'siro18.jpg', 'siro');
+insert into hyogo(name, rice_percent, ALC, image, genre) values('白鷹御神酒', 70, 15, 'siro19.jpg', 'siro');
 insert into hyogo(name, materials, ALC, image, genre) values('純米焼酎　ENOSHIMA BREEZE', '米、米麹', 25, 'siro20.jpg', 'siro');
 insert into hyogo(name, rice, ALC, image, genre) values('長期熟成 樽貯蔵純米焼酎ハクタカ', '特A山田錦', 25, 'siro21.jpg', 'siro');
 insert into hyogo(name, rice, ALC, image, genre) values('長期熟成 純米焼酎ハクタカ', '特A山田錦', 25, 'siro22.jpg', 'siro');
-insert into hyogo(name, rice_percent, ALC, image, genre) values('クールハクタカ生貯蔵酒', 70, 15.0-15.9, 'siro23.jpg', 'siro');
-insert into hyogo(name, rice_percent, ALC, image, genre) values('冷晴', 70, 15.0-15.9, 'siro24.jpg', 'siro');
+insert into hyogo(name, rice_percent, ALC, image, genre) values('クールハクタカ生貯蔵酒', 70, 15, 'siro23.jpg', 'siro');
+insert into hyogo(name, rice_percent, ALC, image, genre) values('冷晴', 70, 15, 'siro24.jpg', 'siro');
 insert into hyogo(name, materials, ALC, image, genre) values('白鷹梅酒～特別純米酒仕込み～', '清酒（国内製造純米酒）、梅（国産）、氷砂糖', 8, 'siro25.jpg', 'siro');
 insert into hyogo(name, materials, ALC, image, genre) values('白鷹梅酒～純米焼酎仕込み～', '米焼酎（国内製造）、梅（国産）、氷砂糖', 15, 'siro26.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・純米 味吟醸(禄水苑)', '兵庫県吉川町特A地区産山田錦100％', 60, 16.0-16.9, 'siro27.jpg', 'siro');
-insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・純米 超辛口(禄水苑)', '兵庫県吉川町特A地区産山田錦100％', 70, 16.0-16.9, 'siro28.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・純米 味吟醸(禄水苑)', '兵庫県吉川町特A地区産山田錦100％', 60, 16, 'siro27.jpg', 'siro');
+insert into hyogo(name, rice, rice_percent, ALC, image, genre) values('生もと・純米 超辛口(禄水苑)', '兵庫県吉川町特A地区産山田錦100％', 70, 16, 'siro28.jpg', 'siro');
 insert into hyogo(name, image, genre) values('生もと・本醸造 清酒阪神タイガース菰冠', 'siro29.jpg', 'siro');
 
 #miyako
