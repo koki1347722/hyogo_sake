@@ -56,35 +56,6 @@ a:active {
     padding-right: 20px;
 }
 
-/* トップ画面（index.php）の３つのジャンルを横一列に表示する */
-.topnavi {
-    display: table;
-    table-layout: fixed;
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 600px;
-    height: 200px;
-}
-
-/* トップ画面（index.php）の各ジャンルを表示するセルのスタイル */
-.topbox {
-    display: table-cell;
-    padding: 0 20px;
-    text-align: center;
-    vertical-align: top;
-    border: 1px solid #c0c0c0;
-}
-
-/* トップ画面（index.php）のジャンルの文字（PC、BOOK、MUSIC）のマージン */
-.topvalue {
-    margin: 10px 0 0;
-}
-
-/* トップ画面（index.php）に表示する各ジャンルの画像の高さ */
-.topimage {
-    height: 120px;
-}
-
 /* エラーメッセージの文字色を赤にする */
 .error_class {
     color: #ff0000;

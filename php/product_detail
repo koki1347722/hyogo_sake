@@ -36,19 +36,19 @@ require_once __DIR__ . '/header.php';
     </tr>
     <tr>
         <th>原材料</th>
-        <td><?php echo $hyogo['kura']; ?></td>
+        <td><?php echo $hyogo['materials']; ?></td>
     </tr>
     <tr>
         <th>精米歩合</th>
-        <td><?php echo $hyogo['kura']; ?></td>
+        <td><?php echo $hyogo['rice_percent']; ?></td>
     </tr>
     <tr>
         <th>麹米・精米歩合</th>
-        <td><?php echo $hyogo['kura']; ?></td>
+        <td><?php echo $hyogo['malt_percent']; ?></td>
     </tr>
     <tr>
         <th>アルコール度数</th>
-        <td><?php echo $hyogo['kura']; ?></td>
+        <td><?php echo $hyogo['ALC']; ?></td>
     </tr>
 </table>
 <br>
